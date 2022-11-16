@@ -1,0 +1,7 @@
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\bin\Debug\Labo2.exe
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\bin\Debug\Labo2.pdb
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\obj\Debug\Labo2.csproj.AssemblyReference.cache
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\obj\Debug\Labo2.csproj.SuggestedBindingRedirects.cache
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\obj\Debug\Labo2.csproj.CoreCompileInputs.cache
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\obj\Debug\Labo2.exe
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Labo\Labo2\obj\Debug\Labo2.pdb

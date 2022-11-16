@@ -1,0 +1,95 @@
+﻿using System;
+
+namespace Labo2
+{
+    public class User
+    {
+        #region attributes
+        private string login;
+        private int password;
+        private DateTime joinDate;
+        private int postCount;
+        #endregion
+
+        #region constructors
+        public User(string login, string password, DateTime joinDate)
+        {
+            this.login = login;
+            Password = password;
+            this.joinDate = joinDate;
+            postCount = 0;
+        }
+        
+        public User(string login, string password) : this(login, password, DateTime.Now) { }
+        
+        public User(string login, string password, int dateAAAAMMJJ) : this(login, password, DateTime.ParseExact(dateAAAAMMJJ.ToString(), "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture)) {}
+        #endregion
+
+        public void AddPost()
+        {
+            postCount++;
+        }
+
+        public bool ValidatePassword(string password)
+        {
+            return this.password == Encode(password);
+        }
+
+        public int Encode(string password)
+        {
+            int sommeChar = 0;
+            foreach (char character in password)
+            {
+                sommeChar += character;
+            }
+
+            return sommeChar % 997;
+        }
+
+        public string Login
+        {
+            get
+            {
+                return login;
+            }
+            set
+            {
+                if (ForumUtils.ValidLogin(value))
+                    login = value;
+            }
+        }
+
+        public string JoinDate
+        {
+            get
+            {
+                return joinDate.ToString("yyyymmdd");
+            }
+            set
+            {
+                joinDate = DateTime.ParseExact(value, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            }
+        }
+        
+        public int PostCount
+        {
+            get
+            {
+                return postCount;
+            }
+        }
+
+        public String Password
+        {
+            set
+            {
+                password = Encode(value);
+            }
+        }
+
+        public override string ToString()
+        {
+            return Login + "(password: " + password + "), " + JoinDate + " - " + postCount + "post" + (postCount >= 2 ? "s":"");
+        }
+    }
+}

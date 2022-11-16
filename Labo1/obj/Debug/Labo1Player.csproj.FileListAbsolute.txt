@@ -1,0 +1,14 @@
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\bin\Debug\Labo1Player.exe
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\bin\Debug\Labo1Player.pdb
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.csproj.AssemblyReference.cache
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.csproj.SuggestedBindingRedirects.cache
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.csproj.CoreCompileInputs.cache
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.exe
+D:\aroz\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.pdb
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\bin\Debug\Labo1Player.exe
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\bin\Debug\Labo1Player.pdb
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.csproj.AssemblyReference.cache
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.csproj.SuggestedBindingRedirects.cache
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.csproj.CoreCompileInputs.cache
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.exe
+C:\Users\duche\OneDrive - Haute Ecole de Namur-Liege-Luxembourg\Cours IG\B2\Q1\POO - Programmation orientée objet\Laboratoire 1 - Introduction\Labo1Player\Labo1Player\obj\Debug\Labo1Player.pdb
