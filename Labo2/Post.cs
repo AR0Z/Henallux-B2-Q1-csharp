@@ -20,11 +20,11 @@ namespace Labo2
         public Post(User author, string contents, DateTime date)
         {
             this.author = author;
-            author.AddPost();
-
             this.contents = contents;
             this.date = date;
             likedBy = new User[INC_LIKEDBY_SIZE];
+            
+            author.AddPost(this);
         }
         
         public Post(User author, string contents) : this(author, contents, DateTime.Now) {}
@@ -33,7 +33,49 @@ namespace Labo2
 
         public void AddLike(User user)
         {
+            if (likedBy[likedBy.Length - 1] != null)
+            {
+                Array.Resize(ref likedBy, likedBy.Length + INC_LIKEDBY_SIZE);
+            }
+
+            likedBy[NbrLike()] = user;
+        }
+        
+        public void AddLike(params User[] userList)
+        {
+            Array.Resize(ref likedBy, likedBy.Length + userList.Length);
+            Array.Copy(userList, 0, likedBy,NbrLike() - 1, userList.Length);
+        }
+
+        public int NbrLike()
+        {
+            int i = 0;
             
+            while (likedBy[i] != null)
+            {
+                i++;
+            }
+
+            return i;
+        }
+
+        public string Contents
+        {
+            get
+            {
+                return contents;
+            }
+        }
+
+        public override string ToString()
+        {
+            string output = contents + " de " + author.Login + " le " + date + "\n like par : "  ;
+            foreach (User user in likedBy)
+            {
+                output += user?.Login + " ";
+            }
+
+            return output;
         }
     }
 }

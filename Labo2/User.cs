@@ -8,7 +8,9 @@ namespace Labo2
         private string login;
         private int password;
         private DateTime joinDate;
-        private int postCount;
+        private int postCount = 0;
+        private int spacesPosted = 0;
+        private int digitsPosted = 0;
         #endregion
 
         #region constructors
@@ -17,7 +19,6 @@ namespace Labo2
             this.login = login;
             Password = password;
             this.joinDate = joinDate;
-            postCount = 0;
         }
         
         public User(string login, string password) : this(login, password, DateTime.Now) { }
@@ -25,8 +26,15 @@ namespace Labo2
         public User(string login, string password, int dateAAAAMMJJ) : this(login, password, DateTime.ParseExact(dateAAAAMMJJ.ToString(), "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture)) {}
         #endregion
 
-        public void AddPost()
+        public void AddPost(Post post)
         {
+            // spaceCount;
+            //int digitCount;
+            //ForumUtils.Count(post.Contents, out spaceCount, out digitCount);
+            //spacesPosted += spaceCount;
+            //digitsPosted += digitCount;
+
+            ForumUtils.CountAndUpdate(post.Contents, ref spacesPosted, ref digitsPosted); 
             postCount++;
         }
 
@@ -86,10 +94,9 @@ namespace Labo2
                 password = Encode(value);
             }
         }
-
         public override string ToString()
         {
-            return Login + "(password: " + password + "), " + JoinDate + " - " + postCount + "post" + (postCount >= 2 ? "s":"");
+            return Login + "(password: " + password + "), " + JoinDate + " - " + postCount + " post" + (postCount >= 2 ? "s ":" ") + spacesPosted + " space" + (spacesPosted >= 2 ? "s ":" ") + digitsPosted + " digit" + (digitsPosted >= 2 ? "s ":" ");
         }
     }
 }
