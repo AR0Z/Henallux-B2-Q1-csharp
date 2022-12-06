@@ -10,7 +10,7 @@
 
         public override string Présentation()
         {
-            return base.Présentation() + ", " + genre;
+            return $"{base.Présentation()}, {genre}";
         }
     }
 }

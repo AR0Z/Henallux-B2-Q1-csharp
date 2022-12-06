@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 namespace Labo1Player 
 {
@@ -81,26 +82,22 @@ namespace Labo1Player
             }
         }
 
-        public string ListingMaps() 
+        public string ListingMaps()
         {
-            string output = "";
+            StringBuilder output = new StringBuilder();
             int i = 1;
-            foreach (Map map in maps) 
+            foreach (Map map in maps)
             {
-                output += i + " - " + map + "\n";
+                output.Append($"{i} - {map}\n");
                 i++;
             }
 
-            return output;
+            return output.ToString();
         }
 
         public override string ToString() 
         {
-            string output = "";
-            output += "Nom et prénom : " + GetName();
-            output += "\nDate de naissance : " + GetBirthday();
-            output += "\n" + (IsRanked() ? "Compétiteur" : "Non compétiteur");
-            return output;
+            return $"Nom et prénom : {GetName()}\nDate de naissance : {GetBirthday()}\n{(IsRanked() ? "Compétiteur" : "Non compétiteur")}";
         }
     }
 }

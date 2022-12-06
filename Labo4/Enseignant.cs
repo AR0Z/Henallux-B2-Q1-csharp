@@ -17,7 +17,7 @@ namespace Labo4
 
         public override string Occupation()
         {
-            return "enseignant chez " + institution.Nom + " - [Domaine : " + domaine + "]";
+            return $"enseignant chez {institution.Nom} - [Domaine: {domaine}]";
         }
 
         public override int PourcRéductionBase

@@ -53,30 +53,33 @@
         {
             get
             {
-                return code + " - " + libellé + (estSponsoriséRW ? "(RW)" : "");
+                return $"{code} - {libellé} {(estSponsoriséRW ? "(RW)" : "")}";
             }
         }
 
         public void ajoutParticipant(Inscrit participant)
         {
-            personnesInscrites[NbrInscrit()] = participant;
+            personnesInscrites[NbrInscrit] = participant;
         }
         
-        public int NbrInscrit()
+        public int NbrInscrit
         {
-            int i = 0;
-            
-            while (personnesInscrites[i] != null)
+            get
             {
-                i++;
-            }
+                int i = 0;
+            
+                while (personnesInscrites[i] != null)
+                {
+                    i++;
+                }
 
-            return i;
+                return i;   
+            }
         }
 
         public override string ToString()
         {
-            return code + " - " + libellé + (estSponsoriséRW ? "(RW)" : "") + " [" + NbrInscrit() + " inscrit(s)]";
+            return $"{Informations} [{NbrInscrit} inscrit(s)]";
         }
     }
 }

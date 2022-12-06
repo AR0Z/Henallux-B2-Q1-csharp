@@ -13,7 +13,7 @@
 
         public override string Présentation()
         {
-            return titreSérie + " : " + titre + " (" + durée + ")";
+            return $"{titreSérie} : {titre} ({durée})";
         }
     }
 }

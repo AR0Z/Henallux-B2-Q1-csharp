@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Labo4
 {
@@ -24,16 +25,19 @@ namespace Labo4
             formationsInscrites[0] = formation;
         }
         
-        public int NbrInscription()
+        public int NbrInscription
         {
-            int i = 0;
-            
-            while (formationsInscrites[i] != null)
+            get
             {
-                i++;
-            }
+                int i = 0;
 
-            return i;
+                while (formationsInscrites[i] != null)
+                {
+                    i++;
+                }
+
+                return i;
+            }
         }
 
         public string FormationPrincipale
@@ -54,7 +58,7 @@ namespace Labo4
             }
         }
 
-        public bool estDejaInscrit(Formation formation)
+        public bool EstDejaInscrit(Formation formation)
         {
 
             return Array.IndexOf(formationsInscrites, formation) != -1;
@@ -62,13 +66,13 @@ namespace Labo4
 
         public void AjoutFormation(Formation formation, bool formationPrincipale=false)
         {
-            if (NbrInscription() < 5 && formation.NbrInscrit() < 25 && !estDejaInscrit(formation))
+            if (NbrInscription < 5 && formation.NbrInscrit < 25 && !EstDejaInscrit(formation))
             {
-                formationsInscrites[NbrInscription()] = formation;
+                formationsInscrites[NbrInscription] = formation;
                 formation.ajoutParticipant(this);
             }
 
-            if (estDejaInscrit(formation))
+            if (EstDejaInscrit(formation))
             {
                 if (formationPrincipale)
                     this.formationPrincipale = formation;
@@ -117,22 +121,22 @@ namespace Labo4
 
         public string FicheInformations()
         {
-            string fiche = "Inscrit : " + this + "\n";
+            StringBuilder fiche = new StringBuilder($"Inscrit : {this} \n");
 
             foreach (Formation formation in formationsInscrites)
             {
                 if(formation != null)
-                    fiche += formation.Informations + "\n";
+                    fiche.Append($"{formation.Informations} \n");
             }
 
-            fiche += "Total à payer : " + CoûtTotal() + "Euros ";
+            fiche.Append($"Total à payer : {CoûtTotal()} Euros");
 
-            return fiche;
+            return fiche.ToString();
         }
         
         public override string ToString()
         {
-            return nom + " (" + codePostal + ")";
+            return $"{nom} ({codePostal})";
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Labo2
 {
@@ -38,25 +39,28 @@ namespace Labo2
                 Array.Resize(ref likedBy, likedBy.Length + INC_LIKEDBY_SIZE);
             }
 
-            likedBy[NbrLike()] = user;
+            likedBy[NbrLike] = user;
         }
         
         public void AddLike(params User[] userList)
         {
             Array.Resize(ref likedBy, likedBy.Length + userList.Length);
-            Array.Copy(userList, 0, likedBy,NbrLike() - 1, userList.Length);
+            Array.Copy(userList, 0, likedBy,NbrLike - 1, userList.Length);
         }
 
-        public int NbrLike()
+        public int NbrLike
         {
-            int i = 0;
-            
-            while (likedBy[i] != null)
+            get
             {
-                i++;
-            }
+                int i = 0;
 
-            return i;
+                while (likedBy[i] != null)
+                {
+                    i++;
+                }
+
+                return i;
+            }
         }
 
         public string Contents
@@ -69,13 +73,13 @@ namespace Labo2
 
         public override string ToString()
         {
-            string output = contents + " de " + author.Login + " le " + date + "\n like par : "  ;
+            StringBuilder output = new StringBuilder(contents + " de " + author.Login + " le " + date + "\n like par : ");
             foreach (User user in likedBy)
             {
-                output += user?.Login + " ";
+                output.Append(user?.Login + " ");
             }
 
-            return output;
+            return output.ToString();
         }
     }
 }

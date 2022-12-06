@@ -13,7 +13,7 @@
 
         public virtual string Présentation()
         {
-            return titre + " (" + durée + " minutes)";
+            return $"{titre} ({durée} minutes)";
         }
     }
 }

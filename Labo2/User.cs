@@ -96,7 +96,7 @@ namespace Labo2
         }
         public override string ToString()
         {
-            return Login + "(password: " + password + "), " + JoinDate + " - " + postCount + " post" + (postCount >= 2 ? "s ":" ") + spacesPosted + " space" + (spacesPosted >= 2 ? "s ":" ") + digitsPosted + " digit" + (digitsPosted >= 2 ? "s ":" ");
+            return $"{Login} (password: {password}), {JoinDate} - {postCount} post{(postCount >= 2 ? "s ":" ")} {spacesPosted} space{(spacesPosted >= 2 ? "s ":" ")} {digitsPosted} digit{(digitsPosted >= 2 ? "s ":" ")}";
         }
     }
 }

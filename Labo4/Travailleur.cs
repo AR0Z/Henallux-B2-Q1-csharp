@@ -13,7 +13,7 @@
         
         public virtual string Occupation()
         {
-            return (institution != null ? "employé chez " + institution.Nom + "\n" : "") + métier;
+            return $"{(institution != null ? "employé chez " + institution.Nom + "\n" : "")} {métier}";
         }
 
         public override int PourcRéductionBase
@@ -28,7 +28,7 @@
 
         public override string ToString()
         {
-            return base.ToString() + " - " + (institution != null ? "employé chez " + institution.Nom  + "("+ institution.CodePostal +")" : métier);
+            return $"{base.ToString()} - {(institution != null ? $"employé chez {institution.Nom} ({institution.CodePostal})" : métier)}";
         }
     }
 }

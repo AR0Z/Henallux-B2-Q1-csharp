@@ -11,26 +11,30 @@ namespace Labo3
             compagnonsAVendre = new ICompagnon[10];
         }
 
-        public int NbrCompagnon()
+        public int NbrCompagnon
         {
-            int i = 0;
-            
-            while (compagnonsAVendre[i] != null)
+            get
             {
-                i++;
-            }
+                int i = 0;
+            
+                while (compagnonsAVendre[i] != null)
+                {
+                    i++;
+                }
 
-            return i;
+                return i;
+            }
+            
         }
 
         public void AjouteCompagnon(ICompagnon compagnon)
         {
-            compagnonsAVendre[NbrCompagnon()] = compagnon;
+            compagnonsAVendre[NbrCompagnon] = compagnon;
         }
 
         public void AjouteCompagnon(params ICompagnon[] compagnon)
         {
-            Array.Copy(compagnon, 0, compagnonsAVendre,NbrCompagnon(), compagnon.Length);
+            Array.Copy(compagnon, 0, compagnonsAVendre,NbrCompagnon, compagnon.Length);
         }
         public void AfficheOffre()
         {
@@ -38,7 +42,7 @@ namespace Labo3
             int i = 1;
             foreach (ICompagnon compagnon in compagnonsAVendre)
             {
-                Console.WriteLine("(" + i + ") " + compagnon.Nom + " : " + compagnon.PrixAchat + " po " + (compagnon.CoûtQuotidien != 0 ? "plus " + compagnon.CoûtQuotidien + " po par jour"  : "" ));
+                Console.WriteLine($"({i}) {compagnon.Nom} : {compagnon.PrixAchat} po {(compagnon.CoûtQuotidien != 0 ? $"plus {compagnon.CoûtQuotidien} po par jour"  : "" )}");
                 i++;
             }
         }

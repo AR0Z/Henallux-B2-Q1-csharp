@@ -77,7 +77,7 @@
         {
             get
             {
-                return Nom + "(" + Pv + "/" + pvMax + ": " + PourcentsPV.ToString("F2") + "%)" + (pv == 0 ? "- MORT" : "");
+                return $"{Nom} ({Pv}/{PvMax}: {PourcentsPV.ToString("F2")}%) {(pv == 0 ? "- MORT" : "")}";
             }
         }
     }

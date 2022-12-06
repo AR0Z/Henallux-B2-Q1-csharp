@@ -12,7 +12,7 @@
 
         public new string Présentation()
         {
-            return "Enfants de " + âgeCible + " ans : " + titre + " (" + titreSérie + " numéro " + numÉpisode + ")";
+            return $"Enfants de {âgeCible} ans : {titre} ({titreSérie} numéro {numÉpisode})";
         }
     }
 }
