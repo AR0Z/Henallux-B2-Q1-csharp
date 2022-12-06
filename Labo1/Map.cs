@@ -37,7 +37,7 @@ namespace Labo1Player
 
         public void Description()
         {
-            Console.Write($"{GetName()} ({verticalSize}x{horizontalSize}, surface {Surface()} cases)\n");
+            Console.Write($"{GetName()} ({verticalSize}x{horizontalSize}, surface {Surface()} cases){Environment.NewLine}");
             if (authorizedInCompetition)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;

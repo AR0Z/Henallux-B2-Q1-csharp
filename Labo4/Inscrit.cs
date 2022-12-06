@@ -121,12 +121,12 @@ namespace Labo4
 
         public string FicheInformations()
         {
-            StringBuilder fiche = new StringBuilder($"Inscrit : {this} \n");
+            StringBuilder fiche = new StringBuilder($"Inscrit : {this} {Environment.NewLine}");
 
             foreach (Formation formation in formationsInscrites)
             {
                 if(formation != null)
-                    fiche.Append($"{formation.Informations} \n");
+                    fiche.Append($"{formation.Informations} {Environment.NewLine}");
             }
 
             fiche.Append($"Total à payer : {CoûtTotal()} Euros");

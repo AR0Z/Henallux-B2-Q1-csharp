@@ -73,7 +73,7 @@ namespace Labo2
 
         public override string ToString()
         {
-            StringBuilder output = new StringBuilder(contents + " de " + author.Login + " le " + date + "\n like par : ");
+            StringBuilder output = new StringBuilder($"{contents} de {author.Login} le {date} {Environment.NewLine}");
             foreach (User user in likedBy)
             {
                 output.Append(user?.Login + " ");

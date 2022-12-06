@@ -88,7 +88,7 @@ namespace Labo1Player
             int i = 1;
             foreach (Map map in maps)
             {
-                output.Append($"{i} - {map}\n");
+                output.Append($"{i} - {map}{Environment.NewLine}");
                 i++;
             }
 
@@ -97,7 +97,7 @@ namespace Labo1Player
 
         public override string ToString() 
         {
-            return $"Nom et prénom : {GetName()}\nDate de naissance : {GetBirthday()}\n{(IsRanked() ? "Compétiteur" : "Non compétiteur")}";
+            return $"Nom et prénom : {GetName()}{Environment.NewLine}Date de naissance : {GetBirthday()}{Environment.NewLine}{(IsRanked() ? "Compétiteur" : "Non compétiteur")}";
         }
     }
 }

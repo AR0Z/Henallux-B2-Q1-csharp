@@ -1,4 +1,6 @@
-﻿namespace Labo4
+﻿using System;
+
+namespace Labo4
 {
     public class Travailleur : Inscrit
     {
@@ -13,7 +15,7 @@
         
         public virtual string Occupation()
         {
-            return $"{(institution != null ? "employé chez " + institution.Nom + "\n" : "")} {métier}";
+            return $"{(institution != null ? $"employé chez {institution.Nom} {Environment.NewLine}" : "")} {métier}";
         }
 
         public override int PourcRéductionBase
