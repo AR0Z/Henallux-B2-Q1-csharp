@@ -42,8 +42,11 @@ namespace Labo3
             int i = 1;
             foreach (ICompagnon compagnon in compagnonsAVendre)
             {
-                Console.WriteLine($"({i}) {compagnon.Nom} : {compagnon.PrixAchat} po {(compagnon.CoûtQuotidien != 0 ? $"plus {compagnon.CoûtQuotidien} po par jour"  : "" )}");
-                i++;
+                if (compagnon is ICompagnon)
+                {
+                    Console.WriteLine($"({i}) {compagnon.Nom} : {compagnon.PrixAchat} po {(compagnon.CoûtQuotidien != 0 ? $"plus {compagnon.CoûtQuotidien} po par jour"  : "" )}");
+                    i++;
+                }
             }
         }
     }
