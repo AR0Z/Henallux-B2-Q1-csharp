@@ -149,16 +149,15 @@ namespace Labo5.Exercice_2
 
         public override string ToString()
         {
-            StringBuilder toString = new StringBuilder($"Informations sur le chapitre de {ville}{Environment.NewLine}{Environment.NewLine}");
+            StringBuilder toString = new StringBuilder($"Informations sur le chapitre de {ville}{Environment.NewLine}");
 
-            toString.Append($"AGENTS :{Environment.NewLine}{Environment.NewLine}");
-
+            toString.AppendLine($"AGENTS :{Environment.NewLine}");
             foreach (Agent agent in agents)
             {
-                toString.Append($"{agent}{Environment.NewLine}{Environment.NewLine}");
+                toString.AppendLine($"{agent}{Environment.NewLine}");
             }
             
-            toString.Append($"SAFEHOUSES :{Environment.NewLine}{Environment.NewLine}");
+            toString.AppendLine($"SAFEHOUSES :{Environment.NewLine}");
 
             foreach (var safehouse in safehouses)
             {

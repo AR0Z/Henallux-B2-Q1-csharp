@@ -48,7 +48,7 @@ namespace Labo5.Exercice_1
             return résultat;
         }
 
-        public bool Contient(T AppelAdd)
+        private bool Contient(T AppelAdd)
         {
             bool contientNuméro = false;
             
